@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "https://hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="org.example.model.Event" table="events">
+        <id name="id" column="id" type="int">
+            <generator class="identity"/>
+        </id>
+        <property name="name" column="name" type="string" not-null="true"/>
+        <property name="description" column="description" type="text" not-null="true"/>
+        <property name="date" column="event_date" type="java.time.LocalDate" not-null="true"/>
+        <property name="location" column="location" type="string" not-null="true"/>
+    </class>
+</hibernate-mapping>
